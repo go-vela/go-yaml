@@ -90,6 +90,15 @@ func TestParseComplicatedDocument(t *testing.T) {
 		{
 			`
 american:
+- team: Boston...\nRed Sox
+`, `
+american:
+- team: Boston...\nRed Sox
+`,
+		},
+		{
+			`
+american:
   - Boston Red Sox
   - Detroit Tigers
   - New York Yankees

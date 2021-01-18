@@ -551,7 +551,8 @@ func (s *Scanner) scan(ctx *Context) (pos int) {
 				return
 			}
 		case '.':
-			if s.indentNum == 0 && ctx.repeatNum('.') == 3 {
+			if s.indentNum == 0 && ctx.repeatNum('.') == 3 && ctx.nextChar() == '\n' {
+				// if s.indentNum == 0 && ctx.repeatNum('.') == 3 {
 				ctx.addToken(token.DocumentEnd(s.pos()))
 				s.progressColumn(ctx, 3)
 				pos += 2

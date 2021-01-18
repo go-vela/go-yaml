@@ -34,6 +34,10 @@ func TestDecoder(t *testing.T) {
 			(*struct{})(nil),
 		},
 		{
+			"v: echo ...\n",
+			map[string]string{"v": "echo ..."},
+		},
+		{
 			"v: hi\n",
 			map[string]string{"v": "hi"},
 		},
